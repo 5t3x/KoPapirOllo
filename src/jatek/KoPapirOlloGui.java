@@ -4,6 +4,8 @@
  */
 package jatek;
 
+import java.awt.TextArea;
+
 /**
  *
  * @author KissMáté(Szf_N_2024_
@@ -65,11 +67,21 @@ public class KoPapirOlloGui extends javax.swing.JFrame {
 
         txtGep.setEditable(false);
         txtGep.setFocusable(false);
+        txtGep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtGepActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("A gép választása:");
 
         btnIndit.setText("Indít");
+        btnIndit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInditActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -138,8 +150,29 @@ public class KoPapirOlloGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtValasztasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValasztasActionPerformed
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_txtValasztasActionPerformed
+
+    private void btnInditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInditActionPerformed
+       String bekeres = txtValasztas.getText();
+       String lehetoseg1 = "Ko";
+       String lehetoseg2 = "Papir";
+       String lehetoseg3 = "Ollo";
+        if (lehetoseg1.equals(bekeres)) {
+            txtEredmeny.setText("Ko");
+        } else if (lehetoseg2.equals(bekeres)) {
+            txtEredmeny.setText("Papir");
+        } else if (lehetoseg3.equals(bekeres)) {
+               txtEredmeny.setText("Ollo");
+        } else {
+            txtEredmeny.setText(" ");
+    }
+    }//GEN-LAST:event_btnInditActionPerformed
+
+    private void txtGepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGepActionPerformed
+        
+    }//GEN-LAST:event_txtGepActionPerformed
 
     /**
      * @param args the command line arguments
