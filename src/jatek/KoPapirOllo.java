@@ -25,39 +25,42 @@ public class KoPapirOllo {
 //        String szoveg = sc.nextLine();
 //        /* bekeres eredmenyeinek felhasznalasa */
 //        System.out.println("A bekert szoveg: " + szoveg);
+
+        /*-----------KO PAPIR OLLO JATEK-----------*/
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
         
-        System.out.println("Valassz egyet: (ko/papir/ollo)");
-        String valasztas = sc.nextLine();
+        System.out.print("Valassz egyet ezek kozul: KO/PAPIR/OLLO \r\n");
+        String jatekosValasztas = sc.nextLine();
         int randomSzam = random.nextInt(3);
         
         String gepValasztas;
         if (randomSzam == 0) {
-            gepValasztas = "ko";
+            gepValasztas = "Ko";
         } else if (randomSzam == 1) {
-            gepValasztas = "papir";
+            gepValasztas = "Papir";
         } else {
-            gepValasztas = "ollo";
+            gepValasztas = "Ollo";
         }
         
         System.out.println("A gep ezt valasztotta: " + gepValasztas);
         
-        if (valasztas.equals(gepValasztas)) {
+        if (jatekosValasztas.equals(gepValasztas)) {
             System.out.println("Dontetlen");
-        } else if (jatekosNyer(valasztas, gepValasztas)) {
+        } else if (jatekosNyer(jatekosValasztas, gepValasztas)) {
             System.out.println("Jatekos nyer");
         } else {
             System.out.println("A gep nyer");
     }
-    }
-    static boolean jatekosNyer(String valasztas, String gepValasztas) {
-        if (valasztas.equals("ko")) {
-            return gepValasztas.equals("ollo");
-        } else if (valasztas.equals("papir")) {
-            return gepValasztas.equals("ko");
+  }
+    
+    static boolean jatekosNyer(String jatekosValasztas, String gepValasztas) {
+        if (jatekosValasztas.equals("Ko")) {
+            return gepValasztas.equals("Ollo");
+        } else if (jatekosValasztas.equals("Papir")) {
+            return gepValasztas.equals("Ko");
         } else {
-            return gepValasztas.equals("papir");
+            return gepValasztas.equals("Papir");
+        }
     }
-}
 }
