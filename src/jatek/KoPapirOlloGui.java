@@ -53,6 +53,14 @@ public class KoPapirOlloGui extends javax.swing.JFrame {
         jLabel3.setText("Választásod:");
 
         txtValasztas.setText("Irj ide!");
+        txtValasztas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtValasztasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtValasztasFocusLost(evt);
+            }
+        });
         txtValasztas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValasztasActionPerformed(evt);
@@ -151,7 +159,6 @@ public class KoPapirOlloGui extends javax.swing.JFrame {
 
     private void txtValasztasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValasztasActionPerformed
         
-        
     }//GEN-LAST:event_txtValasztasActionPerformed
 
     private void btnInditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInditActionPerformed
@@ -173,6 +180,14 @@ public class KoPapirOlloGui extends javax.swing.JFrame {
     private void txtGepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGepActionPerformed
         
     }//GEN-LAST:event_txtGepActionPerformed
+
+    private void txtValasztasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtValasztasFocusGained
+        
+    }//GEN-LAST:event_txtValasztasFocusGained
+
+    private void txtValasztasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtValasztasFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtValasztasFocusLost
 
     /**
      * @param args the command line arguments
